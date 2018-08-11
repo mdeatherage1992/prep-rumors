@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'acts_as_votable', '~> 0.11.1'
 # Use sqlite3 as the database for Active Record
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'sqlite3'
