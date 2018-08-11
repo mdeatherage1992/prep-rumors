@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20180811153639) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "link_id"
+    t.integer  "post_id"
     t.text     "body"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["link_id"], name: "index_comments_on_link_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 20180811153639) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer  "votable_id"
     t.string   "votable_type"
-    t.integer  "voter_id"
+    t.integer  "votable_id"
     t.string   "voter_type"
+    t.integer  "voter_id"
     t.boolean  "vote_flag"
     t.string   "vote_scope"
     t.integer  "vote_weight"
